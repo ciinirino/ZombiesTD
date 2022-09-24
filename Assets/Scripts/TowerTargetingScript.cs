@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- *  finds tranform of closest zombie in range
- *  this is done by using a collider to detect trigger entry, and if the tag of the trigger is a zombie adding it to a list of targets
- *  then comparing the distance of this object to each item on the list and returning the tranform with the smallest distance
- *  the transform of that object is collected in the parent tower object
- * 
- * 
+ * SEPT 23 2022
+ * makes a list of all objects with the "Zombie" tag that are within the targeting collider
+ * compares the distance to all transforms in the list and finds the closest
+ * the transform of that object is collected in the parent tower object
  */
 public class TowerTargetingScript : MonoBehaviour
 {
 
-    //the targeting collider is exclusively used for finding targets
+    //the targeting collider is exclusively used for finding targets to fire at
     public SphereCollider targetingCollider;
 
     //a list of all potential targets that enter the target's collider
-    public List<Transform> targets = new List<Transform>();
+    List<Transform> targets = new List<Transform>();
 
-    //this acts as a firing range as well as a targeting range
+    //this currently acts as a firing range as well as a targeting range
     public float targetingRange;
 
-    //collected in the parent tower object
+    //read from the parent tower object
     public Transform currentTarget;
 
     void Start()
@@ -51,7 +49,7 @@ public class TowerTargetingScript : MonoBehaviour
             targets.Remove(other.transform);
         }
     }
-
+ 
     public Transform ClosestTarget()
     {
         //if there are no targets in the target list this function will return null
@@ -70,7 +68,7 @@ public class TowerTargetingScript : MonoBehaviour
             if(t == null)
             {
                 targets.Remove(t);
-                //if this makes the list empty return null
+                //if removing an object makes the list empty return null
                 if(targets.Count == 0)
                 {
                     return null;
@@ -81,6 +79,7 @@ public class TowerTargetingScript : MonoBehaviour
             
             else
             {
+                //setting the first object on the list the default to be compared to
                 if (closestTarget == null)
                 {
                     closestTarget = t;

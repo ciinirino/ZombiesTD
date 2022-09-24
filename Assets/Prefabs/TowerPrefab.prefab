@@ -44,7 +44,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2374195653792983068
 MonoBehaviour:
@@ -173,8 +173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c0e1603d575a54cbfda8efde9e667a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 2
+  parentTile: {fileID: 0}
   Bullet: {fileID: 6819888114116348933, guid: ed84fb8bcca789c46a2270e99581608b, type: 3}
-  firingInterval: 3
-  bulletSpeed: 20
+  firingInterval: 2
+  bulletSpeed: 200
   thisTargeting: {fileID: 0}
   currentTarget: {fileID: 0}
