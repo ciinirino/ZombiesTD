@@ -36,6 +36,8 @@ public class GameControllerScript : MonoBehaviour
     void Update()
     {
         //handles removing destroyed objects from the objectiveList
+        //!!this returns the error "InvalidOperationException: Collection was modified; enumeration operation may not execute."
+        //!!code still seems to function properly
         foreach (GameObject objective in objectivesList)
         {
             if (objective == null)

@@ -56,10 +56,13 @@ public class TestScript : MonoBehaviour
      * harder / more time consuming to implement than i thought
      * https://docs.unity3d.com/ScriptReference/MenuItem.html
      * https://answers.unity.com/questions/381630/listen-for-a-key-in-edit-mode.html
+     * 
      * %%%
+     * 
      * BARRICADES AND NAVMESH
      * currently my solution to not having barricades be partof the navmesh is to bake the scene then add the barricades.
      * this might work long term as objects created play are not par of the navmesh either
+     * 
      * %%%
      * 
      * PHASE TWO GOALS - UI
@@ -80,6 +83,8 @@ public class TestScript : MonoBehaviour
      * $hp can be adjusted in inspector, remove the individual script's hp assigning
      * $add tower life
      * 
+     * PHASE 2.5 CREATING LEVELS IN SCENE
+     * 
      * 
      * PHASE 3 ZOMBIE AND TOWER INTELLIGENCE
      * 
@@ -93,8 +98,9 @@ public class TestScript : MonoBehaviour
      * clean up UI
      * 
      * 
-     * PHASE 4 UPGRADING
+     * PHASE 4 UPGRADING TOWERS & SPECIAL ZOMBIES
      * 
      * 
+     *  
      */
 }
