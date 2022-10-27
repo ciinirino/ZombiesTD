@@ -1,12 +1,20 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
- * SEPT 23 2022
+using UnityEngine.EventSystems;
+/*SUMMARY (Updated oct 26 2022)
  * 
  * this object is a "singleton", having only one in the scene and the "dontDestroyOnLoad" property
  * this object is for holding global variables and data
  *      the only action this object takes is to remove destroyed gameobjects from objectivesList
+ *      
+ *VARIABLES
+ * player's score
+ *      towers and upgrades cost score to build
+ *      points should be earned from killing zombies
+ *      displayed by UIMain
+ * List of zombie objectives (currently nonfunctional; towers do not add themselves to list)
+ *      this list holds all targets that zombies will path to
+ *      also clears targets from list when they are destroyed
  */
 public class GameControllerScript : MonoBehaviour
 {
@@ -32,17 +40,17 @@ public class GameControllerScript : MonoBehaviour
         }
         DontDestroyOnLoad(this);
     }
+
     // Update is called once per frame
     void Update()
     {
         //handles removing destroyed objects from the objectiveList
-        //!!this returns the error "InvalidOperationException: Collection was modified; enumeration operation may not execute."
-        //!!code still seems to function properly
         foreach (GameObject objective in objectivesList)
         {
             if (objective == null)
             {
                 objectivesList.Remove(objective);
+                return;
             }
         }
     }

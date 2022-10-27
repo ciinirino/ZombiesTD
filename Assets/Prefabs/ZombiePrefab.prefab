@@ -112,8 +112,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b505799930e8a418e7401636123a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackSpeed: 1
+  zombieName: BasicZombie
+  zombieSpeed: 2
+  startHP: 3
+  HP: 0
+  zombieDmg: 1
+  zombieAttackSpeed: 2
+  zombieBounty: 1
+  myMat: {fileID: 0}
+  baseColor: {r: 0, g: 0, b: 0, a: 0}
+  hpPercent: 0
 --- !u!195 &-3450336901118262555
 NavMeshAgent:
   m_ObjectHideFlags: 0

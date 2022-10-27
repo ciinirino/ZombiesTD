@@ -7,10 +7,12 @@ TagManager:
   - Tower
   - Zombie
   - Obstacle
-  - Buildable
   - UI
   - Barricade
   - ZombieObjective
+  - BuildTile
+  - Floor
+  - Targeting
   layers:
   - Default
   - TransparentFX

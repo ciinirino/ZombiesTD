@@ -59,8 +59,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetingCollider: {fileID: 0}
-  targets: []
-  targetingRange: 5
   currentTarget: {fileID: 0}
 --- !u!1 &5431931173812681004
 GameObject:
@@ -173,10 +171,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c0e1603d575a54cbfda8efde9e667a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
+  baseMaterial: {fileID: 2100000, guid: b5b2020e788bfb44685e42850b199c41, type: 2}
+  HighlightMaterial: {fileID: 2100000, guid: 81ea21b676f03684290c71bfb43b543b, type: 2}
+  towerName: Basic Tower
+  towerCost: 3
+  towerSellValue: 1
+  startHP: 3
+  startDmg: 1.5
+  startAtkSpd: 2
+  startBulletSpeed: 100
+  startRange: 4
+  HP: 0
+  dmg: 0
+  atkSpd: 0
+  bulletSpeed: 0
+  range: 0
+  dmgUpgrades: 1
+  atkSpdUpgrades: 1
+  bulletSpeedUpgrades: 1
+  rangeUpgrades: 1
+  nextDmg: 0
+  nextAtkSpd: 0
+  nextBulletSpeed: 0
+  nextRange: 0
   parentTile: {fileID: 0}
-  Bullet: {fileID: 6819888114116348933, guid: ed84fb8bcca789c46a2270e99581608b, type: 3}
-  firingInterval: 2
-  bulletSpeed: 200
   thisTargeting: {fileID: 0}
+  Bullet: {fileID: 6819888114116348933, guid: ed84fb8bcca789c46a2270e99581608b, type: 3}
   currentTarget: {fileID: 0}

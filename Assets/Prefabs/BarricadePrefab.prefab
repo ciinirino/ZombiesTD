@@ -112,3 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   parentTile: {fileID: 0}
+  towerName: Barricade
+  towerCost: 1
+  towerSellValue: 0
